@@ -1,3 +1,6 @@
+#mindmap program by Phillip Banky
+
+
 #import gui functionality from the tkinter module
 from tkinter import *
 
