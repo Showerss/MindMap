@@ -1,4 +1,5 @@
 #mindmap program by Phillip Banky
+#This program is a simple mindmap program that allows the user to create a mindmap
 
 
 #import gui functionality from the tkinter module
