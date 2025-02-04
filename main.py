@@ -2,6 +2,7 @@
 #This program is a simple mindmap program that allows the user to create a mindmap
 
 import tkinter as tk
+import pyvis
 
 
 class MindmapCanvas(tk.Canvas):
@@ -47,7 +48,19 @@ def how_to_popup():
 
 
 def create_map():
-    pass
+    #small popup window to ask if you have a file to import or are you starting fresh
+    create_window = tk.Tk()
+    create_window.title('Create Mindmap')
+    create_window.geometry('200x100')
+
+    starting_fresh_label = tk.Label(create_window, text='You can either start a new custom mindmap or a notes file that we will scan and assign nodes according to frequency and overall theme.')
+    starting_fresh_label.pack()
+
+    import_button = tk.Button(create_window, text='Import File')
+    import_button.pack()
+
+    new_map_button = tk.Button(create_window, text='New Custom Map')
+
 
 
 def show_contact_window():
