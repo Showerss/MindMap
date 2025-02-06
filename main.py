@@ -28,7 +28,8 @@ class MindmapCanvas(tk.Canvas): #mindmap class that inherits from tk.Canvas
     #create my methods for moving around the canvas
     #track where the mouse is when the user clicks
     def start_pan(self, event):
-        pass
+        self.scan_mark_x = event.x
+        self.scan_mark_y = event.y
 
     #move the canvas around by tracking the mouse movement distance
     def pan(self, event):
@@ -101,7 +102,7 @@ buttons_frame = tk.Frame(window, width=200, height=600, bg='light blue')
 buttons_frame.pack(side='left')
 
 #display some buttons to generate a blank page, anchor it to the buttons_frame
-newButton = tk.Button(buttons_frame, text='New')
+newButton = tk.Button(buttons_frame, bg='light blue', text='New')
 newButton.pack(side='top', anchor='nw')
 
 #how-to button located at the bottom right of the window, to the left of the contact button
