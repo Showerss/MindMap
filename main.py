@@ -60,7 +60,7 @@ def create_map():
     import_button.pack()
 
     new_map_button = tk.Button(create_window, text='New Custom Map')
-
+    new_map_button.pack()
 
 
 def show_contact_window():
@@ -68,6 +68,9 @@ def show_contact_window():
     contact_window.title('Contact Us')
     contact_window.geometry('800x600')
     contact_window.mainloop()
+
+def exit_program():
+    window.destroy()
 
 
 ############# Main Program Window #############
@@ -106,11 +109,15 @@ createButton = tk.Button(buttons_frame, text='Create')
 # createButton.grid(row=0, column=0, sticky='nw')
 createButton.config(command=create_map)
 
-
 #contact button
 contactButton = tk.Button(buttons_frame, text='Contact Us')
 contactButton.pack(side='bottom', anchor='sw')
 contactButton.config(command=show_contact_window)
+
+#exit button
+exitButton = tk.Button(buttons_frame, text='Exit')
+exitButton.pack(side='bottom', anchor='se')
+exitButton.config(command=exit_program)
 
 
 mindmap_canvas = MindmapCanvas(output_frame, width=600, height=600, bg='white')
